@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>jQuery validation plug-in - main demo</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="css/screen.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="css/miEstilo.css" />
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/jquery.validate.js" type="text/javascript"></script>
+		<script src="js/misFunciones.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<h1 id="banner"><a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/">jQuery Validation Plugin</a> Demo</h1>
+		<div id="main">
+			<p>
+				 SubmitHandler por defecto esta configurado para mostrar una alerta en la presentacion de la forma
+			</p>
+			<form class="cmxform" id="commentForm" method="get" action="">
+				<fieldset>
+					<legend>
+						Por favor introduzca su nombre, email, direccion (no sera publicado) y un comentario
+					</legend>
+					<p>
+						<label for="cname">Nombre(al menos dos caracteres)</label>
+						<input id="cname" name="name" class="required" minlength="2" />
+						<p>
+							<label for="cemail">E-Mail (requerido)</label>
+							<input id="cemail" name="email" class="required email" />
+						</p>
+						<p>
+							<label for="curl">URL (opcional)</label>
+							<input id="curl" name="url" class="url" value="" />
+						</p>
+						<p>
+							<label for="ccomment">Su comentario (requerido)</label>
+							<textarea id="ccomment" name="comment" class="required"></textarea>
+						</p>
+						<p>
+							<input class="submit" type="submit" value="Submit"/>
+						</p>
+				</fieldset>
+			</form>
+			<form class="cmxform" id="signupForm" method="get" action="">
+				<fieldset>
+					<legend>
+						Validacion de un formulario completo
+					</legend>
+					<p>
+						<label for="firstname">Nombre</label>
+						<input id="firstname" name="firstname" />
+					</p>
+					<p>
+						<label for="lastname">Apellido</label>
+						<input id="lastname" name="lastname" />
+					</p>
+					<p>
+						<label for="username">Nombre de usuario</label>
+						<input id="username" name="username" />
+					</p>
+					<p>
+						<label for="password">Contraseña</label>
+						<input id="password" name="password" type="password" />
+					</p>
+					<p>
+						<label for="confirm_password">Confirme contraseña</label>
+						<input id="confirm_password" name="confirm_password" type="password" />
+					</p>
+					<p>
+						<label for="email">Email</label>
+						<input id="email" name="email" />
+					</p>
+					<p>
+						<label for="agree">Por favor acepte nuestra politica</label>
+						<input type="checkbox" class="checkbox" id="agree" name="agree" />
+					</p>
+					<p>
+						<label for="newsletter">Me gustaria recibir el boletin de noticias </label>
+						<input type="checkbox" class="checkbox" id="newsletter" name="newsletter" />
+					</p>
+					<fieldset id="newsletter_topics">
+						<legend>
+							Topicos (seleccione com minimo dos) 
+						</legend>
+						<label for="topic_marketflash">
+							<input type="checkbox" id="topic_marketflash" value="marketflash" name="topic" />
+							Marketflash </label>
+						<label for="topic_fuzz">
+							<input type="checkbox" id="topic_fuzz" value="fuzz" name="topic" />
+							Ultimas fuzz </label>
+						<label for="topic_digester">
+							<input type="checkbox" id="topic_digester" value="digester" name="topic" />
+							Digestor de correo lista </label>
+						<label for="topic" class="error">Por favor seleccione al menos dos temas que le gustaria recibir.</label>
+					</fieldset>
+					<p>
+						<input class="submit" type="submit" value="Submit"/>
+					</p>
+				</fieldset>
+			</form>
+		</div>
+	</body>
+</html>
